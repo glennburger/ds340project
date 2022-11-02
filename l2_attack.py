@@ -17,6 +17,11 @@ TARGETED = True          # should we target one specific class? or just be wrong
 CONFIDENCE = 0           # how strong the adversarial example should be
 INITIAL_CONST = 1e-3     # the initial constant c to pick as a first guess
 
+### GLENN's changed
+###Assessing model holistically, assessing model's variables
+
+### Will be using for loop to see if these are indeed the best variables for the job
+
 class CarliniL2:
     def __init__(self, sess, model, batch_size=1, confidence = CONFIDENCE,
                  targeted = TARGETED, learning_rate = LEARNING_RATE,

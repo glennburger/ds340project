@@ -17,6 +17,12 @@ from setup_mnist import MNIST
 from setup_cifar import CIFAR
 import os
 
+
+### GLENN's changed
+###Assessing model holistically, assessing model's variables
+
+### is structure of the network efficient? Is RELU best activation function
+
 def train(data, file_name, params, num_epochs=50, batch_size=128, train_temp=1, init=None):
     """
     Standard neural network training procedure.
@@ -71,6 +77,10 @@ def train(data, file_name, params, num_epochs=50, batch_size=128, train_temp=1, 
 
     return model
 
+
+
+### assessing how the distillation variables work
+### manipulating training temperature and epochs and batch size
 def train_distillation(data, file_name, params, num_epochs=50, batch_size=128, train_temp=1):
     """
     Train a network using defensive distillation.
